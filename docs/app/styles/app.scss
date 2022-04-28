@@ -330,13 +330,13 @@
 }
 
 .scenario-transitions .message {
-  width: 7em;
-  background-color: lightblue;
+  background-color: #b72f74;
   color: white;
-  font: italic bold 16px/2 cursive;
+  font-size: 2rem;
+  font-family: cursive, serif;
   box-sizing: border-box;
-  padding: 2em;
-  border-radius: 10px;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
 }
 
 .scenario-transitions .selector {
