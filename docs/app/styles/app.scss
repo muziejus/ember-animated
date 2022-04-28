@@ -10,6 +10,7 @@
 .scenario-sprites {
   border-bottom: 2px solid lightblue;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .scenario-sprites > .animated-container {
@@ -18,6 +19,7 @@
 }
 
 .scenario-sprites .each-item {
+  padding: 0 0.5rem 0 0.5rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -39,8 +41,8 @@
 }
 
 .scenario-sprites .each-item > button {
-  color:white;
-  transition: background-color .5s;
+  color: white;
+  transition: background-color 0.5s;
 }
 
 .scenario-sprites button:hover {
@@ -55,9 +57,26 @@
 .scenario-sprites .top-bar {
   border-top: 1px solid lightblue;
   border-bottom: 1px solid lightblue;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding: 0.25rem 0 0.25rem 0;
   flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.scenario-sprites .top-bar button {
+  border-radius: 0.25rem;
+  text-align: center;
+  padding: 0 1.5rem 0 1.5rem;
+  border: 1px solid lightblue;
+  margin-right: 0.5rem;
+}
+
+.scenario-sprites .top-bar button svg {
+  display: inline-flex;
+  align-self: center;
+  height: 2rem;
+  width: 2rem;
 }
 
 .scenario-sprites .message {
@@ -68,7 +87,13 @@
 }
 
 .scenario-sprites .mail-buttons {
-  float: right;
+  margin-left: auto;
+}
+
+.scenario-sprites .mail-buttons svg {
+  height: 1rem;
+  width: 1rem;
+  fill: gray;
 }
 
 .scenario-sprites .inbox {
@@ -78,20 +103,25 @@
 
 .scenario-sprites .sidebar {
   border-right: 2px solid lightblue;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+.scenario-sprites .sidebar svg {
+  display: inline-flex;
 }
 
 .scenario-sprites .sidebar > table {
   border-collapse: collapse;
 }
 
-.scenario-sprites .sidebar > table > tr > td {
+.scenario-sprites .sidebar > table > tbody > tr > td {
   padding: 8px;
   text-align: left;
   border-bottom: 2px solid lightblue;
   border-right: 1px solid lightblue;
 }
 
-.scenario-sprites .sidebar > table > th {
+.scenario-sprites .sidebar > table > tbody > th {
   text-align: left;
 }
 
@@ -100,8 +130,6 @@
   text-align: left;
 }
 /* END-SNIPPET */
-
-
 
 /* BEGIN-SNIPPET two-lists-snippet.css */
 
@@ -117,7 +145,7 @@
 }
 
 .scenario-two-lists .bounce {
-  font-family: "Andale Mono";
+  font-family: 'Andale Mono';
   color: rgb(9, 114, 149);
   padding: 5px;
   display: flex;
@@ -146,7 +174,7 @@
   text-align: left;
   font-size: 25px;
   border-bottom: 2px solid rgb(60, 127, 168);
-  font-family: "Helvetica Neue";
+  font-family: 'Helvetica Neue';
   color: rgb(9, 59, 91);
 }
 
@@ -157,7 +185,7 @@
   border-bottom: 2px solid rgb(60, 127, 168);
   border-radius: 5px;
   padding: 5px;
-  font-family: "Helvetica Neue";
+  font-family: 'Helvetica Neue';
   color: rgb(9, 59, 91);
   background-color: rgb(227, 244, 250);
 }
@@ -188,7 +216,7 @@
 .scenario-two-lists .each-item > .name {
   text-align: left;
   padding-left: 10px;
-  font-family: "Helvetica Neue";
+  font-family: 'Helvetica Neue';
   flex: 1;
   font-size: 17px;
 }
@@ -206,9 +234,7 @@
   color: rgb(202, 236, 149);
 }
 
-
 /* END-SNIPPET */
-
 
 /* BEGIN-SNIPPET rules-snippet.css */
 .scenario-rules .animated-container {
@@ -223,7 +249,7 @@
   border: 2px solid lightskyblue;
   width: 1em;
   color: blue;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
   border-radius: 5px;
 }
 
@@ -241,7 +267,6 @@
   transform: translateZ(0);
 }
 /* END-SNIPPET */
-
 
 /* BEGIN-SNIPPET hero-snippet.css */
 .hero-list {
@@ -299,12 +324,11 @@
 /* END-SNIPPET */
 
 /* BEGIN-SNIPPET transitions-snippet.css */
-.scenario-transitions  {
+.scenario-transitions {
   display: flex;
   margin-block-start: 2em;
   height: 7em;
 }
-
 
 .scenario-transitions .message {
   width: 7em;
@@ -316,7 +340,6 @@
   border-radius: 10px;
 }
 
-
 .scenario-transitions .selector {
   width: 25%;
 }
@@ -327,7 +350,6 @@
   background-color: blue;
 }
 /* END-SNIPPET */
-
 
 /* BEGIN-SNIPPET move-over-snippet.css */
 .move-over {
@@ -357,7 +379,6 @@
 }
 /* END-SNIPPET */
 
-
 .moving-word {
   display: inline-block;
   vertical-align: top;
@@ -384,9 +405,11 @@
 
 /* END-SNIPPET */
 
-
-.transition-log-table, .transition-log-table td, .transition-log-table th {
+.transition-log-table,
+.transition-log-table td,
+.transition-log-table th {
   border: 1px solid black;
+  padding: 0 0.5rem;
 }
 
 .transition-log-table {
@@ -410,7 +433,6 @@
   color: white;
 }
 
-
 .motion-menu {
   display: flex;
   flex-direction: column;
@@ -418,4 +440,3 @@
   border-bottom: 2px solid rgb(30, 167, 212);
   padding-bottom: 10px;
 }
-

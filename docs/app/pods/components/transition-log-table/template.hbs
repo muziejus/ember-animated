@@ -13,13 +13,13 @@
     {{#animated-each this.messages as |message|}}
       <tr>
         <td>
-          {{message.inserted}}
+          {{array-to-list message.inserted}}
         </td>
         <td>
-          {{message.kept}}
+          {{array-to-list message.kept}}
         </td>
         <td>
-          {{message.removed}}
+          {{array-to-list message.removed}}
         </td>
       </tr>
     {{/animated-each}}

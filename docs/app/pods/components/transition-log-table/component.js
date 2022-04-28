@@ -15,5 +15,6 @@ export default class extends Component {
 
   @action logTransition(context) {
     this.messages = [...this.messages, printSprites(context)];
+    console.log(this.messages);
   }
 }

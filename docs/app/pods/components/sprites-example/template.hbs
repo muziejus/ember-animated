@@ -1,9 +1,13 @@
 {{! BEGIN-SNIPPET sprites-snippet.hbs }}
 <div class="scenario-sprites clearfix">
   <div class="top-bar">
-    <button type="button" {{on "click" this.addItem}}>{{svg-jar "envelope-big"}}</button>
-    <button type="button" {{on "click" this.deleteItems}}>{{svg-jar "trash-big"}}</button>
-    <div class="mail-buttons">
+    <button type="button" {{on "click" this.addItem}}>
+      {{svg-jar "envelope-big" role="img" title="Check Mail" desc="An icon of an envelope"}}
+    </button>
+    <button type="button" {{on "click" this.deleteItems}}>
+      {{svg-jar "trash-big" title="Delete Mail" desc="An icon of a trash can"}}
+    </button>
+    <div class="mail-buttons" aria-hidden>
       {{svg-jar "mail-reply-big"}}
       {{svg-jar "mail-reply-all-big"}}
       {{svg-jar "mail-forward-big"}}
