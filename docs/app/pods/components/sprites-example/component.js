@@ -12,7 +12,7 @@ export default class SpriteExample extends Component {
   makeItems() {
     let result = [];
     for (let i = 0; i < 7; i++) {
-      result.push(makeRandomItem(i));
+      result.push(this.randomItem(i));
     }
     return result;
   }
@@ -36,10 +36,9 @@ export default class SpriteExample extends Component {
 
   @action addItem() {
     let items = this.items;
-    let index = Math.floor(Math.random() * Math.floor(10));
     this.items = items
       .slice(0, 0)
-      .concat([makeRandomItem(index)])
+      .concat([this.randomItem()])
       .concat(items.slice(0));
   }
 
@@ -47,25 +46,31 @@ export default class SpriteExample extends Component {
     let items = this.items;
     this.items = items.filter((item) => !item.deleteMessage);
   }
-}
 
-function makeRandomItem(index) {
-  let messages = [
-    'Hi',
-    'Hello',
-    'Invitation',
-    'Thank You',
-    'Congratulations',
-    'Namaste',
-    'Happy Birthday',
-    'Aloha',
-    'Welcome',
-    'Urgent',
-  ];
-  return {
-    message: messages[index],
-    deleteMessage: false,
-    received: new Date(),
-  };
+  randomItem(index) {
+    const messages = [
+      'Hi',
+      'Hello',
+      'Invitation',
+      'Thank You',
+      'Congratulations',
+      'Namaste',
+      'Happy Birthday',
+      'Aloha',
+      'Welcome',
+      'Urgent',
+      'Bom dia',
+    ];
+    let message = messages[Math.floor(Math.random() * messages.length)];
+    if (index >= 0) {
+      message = messages[index];
+    }
+
+    return {
+      message: message,
+      deleteMessage: false,
+      received: new Date(),
+    };
+  }
 }
 //END-SNIPPET

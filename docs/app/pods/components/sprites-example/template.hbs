@@ -1,39 +1,39 @@
 {{! BEGIN-SNIPPET sprites-snippet.hbs }}
-<div class="scenario-sprites clearfix">
+<div class="scenario-sprites clearfix" aria-label="Email Inbox Component Demo">
   <div class="top-bar">
     <button type="button" {{on "click" this.addItem}}>
-      {{svg-jar "envelope-big" role="img" title="Check Mail" desc="An icon of an envelope"}}
+      {{svg-jar "envelope" role="img" title="Check Mail" desc="An icon of an envelope"}}
     </button>
     <button type="button" {{on "click" this.deleteItems}}>
-      {{svg-jar "trash-big" title="Delete Mail" desc="An icon of a trash can"}}
+      {{svg-jar "trash" title="Delete Mail" desc="An icon of a trash can"}}
     </button>
     <div class="mail-buttons" aria-hidden>
-      {{svg-jar "mail-reply-big"}}
-      {{svg-jar "mail-reply-all-big"}}
-      {{svg-jar "mail-forward-big"}}
+      {{svg-jar "mail-reply"}}
+      {{svg-jar "mail-reply-all"}}
+      {{svg-jar "mail-forward"}}
     </div>
   </div>
 
   <AnimatedContainer>
-    <div class="sidebar">
+    <div class="sidebar" aria-label="Mailboxes List" role="presentation">
       <table>
         <tbody>
           <th>Mail {{svg-jar "caret-down"}}</th>
           <tr>
-            <td>{{svg-jar "inbox"}} Inbox({{this.items.length}})</td>
+            <td>{{svg-jar "inbox"}} Inbox ({{this.items.length}})</td>
           </tr>
           <tr>
             <td>{{svg-jar "paper-plane"}} Sent Mail</td>
           </tr>
           <tr>
-            <td>{{svg-jar "edit"}} Drafts(3)</td>
+            <td>{{svg-jar "edit"}} Drafts (3)</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="inbox">
+    <div class="inbox" aria-label="Email Inbox" role="list">
       {{#animated-each this.items use=this.transition as |item|}}
-        <div class="each-item">
+        <div class="each-item" role="listitem">
           <input
             aria-label="toggle {{item.message}}"
             type="checkbox"
@@ -41,7 +41,9 @@
             {{on "change" (fn (mut item.deleteMessage) (not item.deleteMessage))}}
           >
           <div class="message">{{item.message}}</div>
-          <div class="date">{{moment-format item.received "MMM D"}}</div>
+          <div class="date">
+            {{moment-format item.received "MMM D"}}
+          </div>
         </div>
       {{/animated-each}}
     </div>

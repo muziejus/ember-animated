@@ -8,7 +8,9 @@
 /* BEGIN-SNIPPET sprites-snippet.css */
 
 .scenario-sprites {
-  border-bottom: 2px solid lightblue;
+  border: 2px solid #b72f74;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
   overflow: hidden;
   margin-bottom: 1rem;
 }
@@ -24,14 +26,18 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  border-collapse: collapse;
-  border-bottom: 2px solid lightblue;
+  border-bottom: 1px solid #b72f74;
   font-style: bold;
   background-color: white;
+  cursor: pointer;
+}
+
+.scenario-sprites .each-item:last-child {
+  border-bottom: none;
 }
 
 .scenario-sprites .each-item:hover {
-  background-color: rgb(38, 136, 228);
+  background-color: #f7dfeb;
 }
 
 .scenario-sprites .person {
@@ -46,29 +52,27 @@
 }
 
 .scenario-sprites button:hover {
-  background-color: rgb(32, 174, 221);
+  background-color: #b72f74;
   color: white;
 }
 
-.scenario-sprites button {
-  color: blue;
-}
-
 .scenario-sprites .top-bar {
-  border-top: 1px solid lightblue;
-  border-bottom: 1px solid lightblue;
-  padding: 0.25rem 0 0.25rem 0;
+  color: #b72f74;
+  fill: #b72f74;
+  padding-bottom: 0.25rem;
   flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-content: center;
 }
 
 .scenario-sprites .top-bar button {
+  fill: currentColor;
   border-radius: 0.25rem;
   text-align: center;
   padding: 0 1.5rem 0 1.5rem;
-  border: 1px solid lightblue;
+  border: 1px solid #b72f74;
   margin-right: 0.5rem;
 }
 
@@ -87,38 +91,33 @@
 }
 
 .scenario-sprites .mail-buttons {
+  cursor: not-allowed;
   margin-left: auto;
 }
 
 .scenario-sprites .mail-buttons svg {
   height: 1rem;
   width: 1rem;
-  fill: gray;
+  fill: lightgray;
 }
 
 .scenario-sprites .inbox {
-  border-left: 2px solid lightblue;
+  border-left: 2px solid #b72f74;
+  border-bottom: 1px solid #b72f74;
+  border-top: 1px solid #b72f74;
   flex: 1;
 }
 
 .scenario-sprites .sidebar {
-  border-right: 2px solid lightblue;
-  padding: 0 0.5rem 0 0.5rem;
+  background-color: #f7dfeb;
+  padding: 0 0.5rem;
+  cursor: not-allowed;
+  border-bottom: 1px solid #b72f74;
+  border-top: 1px solid #b72f74;
 }
 
 .scenario-sprites .sidebar svg {
   display: inline-flex;
-}
-
-.scenario-sprites .sidebar > table {
-  border-collapse: collapse;
-}
-
-.scenario-sprites .sidebar > table > tbody > tr > td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 2px solid lightblue;
-  border-right: 1px solid lightblue;
 }
 
 .scenario-sprites .sidebar > table > tbody > th {
@@ -414,7 +413,7 @@
 
 .transition-log-table {
   border-collapse: collapse;
-  width: 50%;
+  width: 100%;
 }
 
 .transition-log-table th {
