@@ -325,6 +325,7 @@
 /* BEGIN-SNIPPET transitions-snippet.css */
 .scenario-transitions {
   display: flex;
+  width: 100%;
   margin-block-start: 2em;
   height: 7em;
 }
@@ -334,47 +335,40 @@
   color: white;
   font-size: 2rem;
   font-family: cursive, serif;
+  width: 10rem;
   box-sizing: border-box;
-  padding: 1rem 2rem;
+  padding: 1rem;
+  text-align: center;
   border-radius: 0.75rem;
-}
-
-.scenario-transitions .selector {
-  width: 25%;
-}
-
-.scenario-transitions .h1 {
-  font: sans-serif;
-  font-style: bold;
-  background-color: blue;
 }
 /* END-SNIPPET */
 
 /* BEGIN-SNIPPET move-over-snippet.css */
 .move-over {
   display: flex;
+  width: 100%;
+  margin-block-start: 2em;
+  height: 7em;
 }
 
-.move-over > .animated-container {
-  overflow: hidden;
+.move-over .message {
+  font-size: 2rem;
+  font-family: cursive, serif;
+  width: 10rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.75rem;
 }
 
 .move-over .hello {
-  width: 7em;
-  background-color: lightblue;
+  background-color: #b72f74;
   color: white;
-  font: italic bold 16px/2 cursive;
-  box-sizing: border-box;
-  padding: 2em;
 }
 
 .move-over .goodbye {
-  width: 7em;
-  background-color: darkblue;
-  color: white;
-  font: italic bold 16px/2 cursive;
-  box-sizing: border-box;
-  padding: 2em;
+  border: 1px solid #b72f74;
+  color: #b72f74;
 }
 /* END-SNIPPET */
 

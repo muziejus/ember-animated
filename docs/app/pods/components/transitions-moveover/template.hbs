@@ -1,5 +1,5 @@
 {{!BEGIN-SNIPPET transitions-moveover-snippet.hbs}}
-<div class="move-over">
+<div class="controls">
   <label>
     Show Hello
     <input
@@ -8,14 +8,16 @@
       {{on "change" this.toggleShowHello}}
     >
   </label>
+</div>
 
+<div class="move-over">
   <AnimatedContainer>
     {{#animated-if this.showHello rules=this.rules}}
-      <div class="hello">
+      <div class="message hello">
         Hello
       </div>
     {{else}}
-      <div class="goodbye">
+      <div class="message goodbye">
         Goodbye
       </div>
     {{/animated-if}}
